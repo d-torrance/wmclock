@@ -1,0 +1,22 @@
+wmclock (1.0.12.2-2.1) unstable; urgency=low
+
+  * NMU
+  * debian/control: added build-dependency on xutils (Closes: #105699)
+
+ -- Branden Robinson <branden@debian.org>  Wed, 18 Jul 2001 17:27:06 -0500
+
+wmclock (1.0.12.2-2) unstable; urgency=low
+
+  * Source dependency xlibs-dev added. Closes: #99377
+
+ -- Szabolcs Horvath <horvaths@janus.gimsz.sulinet.hu>  Mon,  4 Jun 2001 07:58:30 +0000
+
+wmclock (1.0.12.2-1) unstable; urgency=low
+
+  * Initial Release. Closes: #93782
+
+ -- Szabolcs Horvath <horvaths@janus.gimsz.sulinet.hu>  Sun, 15 Apr 2001 07:08:38 +0000
+
+Local variables:
+mode: debian-changelog
+End:
