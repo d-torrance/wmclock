@@ -1,13 +1,14 @@
-This package was debianized by HORVATH Szabolcs <horvaths@janus.gimsz.sulinet.hu> on
-Sun, 15 Apr 2001 07:08:38 +0000.
+This package was debianized by Szabolcs Horvath
+<horvaths@janus.gimsz.sulinet.hu> on Sun, 15 Apr 2001 07:08:38 +0000.
+It is now maintained by Romain Francoise <rfrancoise@debian.org>.
 
 It was downloaded from http://www.bensinclair.com/dockapp/
 
 Upstream Author: Jim Knoble <jmknoble@pobox.com>
 
-Copyright:
+Copyright: wmclock contains parts from asclock and original code, all
+licensed under the GNU General Public License (GPL), with additional
+warranty-voiding clauses.
 
-GPL
-
-On Debian GNU/Linux systems, the text of the GPL can be found in
-/usr/share/common-licenses/GPL.
+On Debian GNU/Linux systems, the complete text of the GNU General Public
+License can be found in `/usr/share/common-licenses/GPL'.

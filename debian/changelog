@@ -1,3 +1,43 @@
+wmclock (1.0.12.2-4) unstable; urgency=low
+
+  * Apply patch from Vino Fernando Crescini <jcrescin@cit.uws.edu.au> to
+    fix -12 and -year combined display (closes: #228985).
+
+ -- Romain Francoise <rfrancoise@debian.org>  Sun, 25 Jan 2004 15:48:43 +0100
+
+wmclock (1.0.12.2-3) unstable; urgency=low
+
+  * New maintainer (closes: #214392).
+  * debian/control:
+    + Update maintainer contact info.
+    + Bump Standards-Version to 3.6.1.0.
+    + Build-Depends on debhelper (>= 4).
+    + Add Depends on ${misc:Depends}.
+    + Add Recommends on wmaker.
+    + Rewrite synopsis and description, including upstream URL.
+  * debian/copyright:
+    + Update maintainer information.
+    + Clarify license info.
+    + Reword sentence about the location of the GNU GPL on Debian 
+      systems.
+  * debian/rules: 
+    + Major facelift, separating configure and build stages.
+    + Remove old DH_COMPAT variables.
+    + Install localized XPM images in /usr/share/wmclock/.
+    + Call dh_installmenu -n.
+  * debian/compat: New file.
+  * debian/README.Debian: New file, explaining how to use the localized 
+    display.
+  * debian/wmclock.{postinst,postrm,menu}: New files.  Install wmclock 
+    in the Debian menu in Apps/Tools.
+  * Don't ship the manpage in the Debian diff, use the version provided 
+    by upstream since they are identical.  Include information about the 
+    localized XPM files.
+  * Acknowledging NMU (closes: #105699).
+  * Include patch to fix -year display (closes: #126742).
+
+ -- Romain Francoise <rfrancoise@debian.org>  Mon,  6 Oct 2003 20:19:30 +0200
+
 wmclock (1.0.12.2-2.1) unstable; urgency=low
 
   * NMU
@@ -17,6 +57,4 @@ wmclock (1.0.12.2-1) unstable; urgency=low
 
  -- Szabolcs Horvath <horvaths@janus.gimsz.sulinet.hu>  Sun, 15 Apr 2001 07:08:38 +0000
 
-Local variables:
-mode: debian-changelog
-End:
+
