@@ -1,3 +1,10 @@
+wmclock (1.0.12.2-5) unstable; urgency=low
+
+  * Add Polish versions of the XPM files courtesy of Kacper Perschke.
+  * debian/control: change Build-Depends to libx11-dev, libxpm-dev.
+
+ -- Romain Francoise <rfrancoise@debian.org>  Fri, 15 Apr 2005 20:25:10 +0200
+
 wmclock (1.0.12.2-4) unstable; urgency=low
 
   * Apply patch from Vino Fernando Crescini <jcrescin@cit.uws.edu.au> to
