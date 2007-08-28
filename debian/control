@@ -1,9 +1,9 @@
 Source: wmclock
 Section: x11
 Priority: optional
-Maintainer: Romain Francoise <rfrancoise@debian.org>
+Maintainer: Debian QA Group <packages@qa.debian.org>
 Build-Depends: debhelper (>= 4), libxpm-dev, libx11-dev, xutils
-Standards-Version: 3.6.1.0
+Standards-Version: 3.7.2
 
 Package: wmclock
 Architecture: any
