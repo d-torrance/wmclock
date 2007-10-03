@@ -1,7 +1,8 @@
 #!/usr/bin/make -f
 
-configure: configure-stamp
+include /usr/share/dpatch/dpatch.make
 
+configure: configure-stamp
 configure-stamp:
 	dh_testdir
 	./configure --prefix=/usr                     \
@@ -9,13 +10,12 @@ configure-stamp:
 	touch configure-stamp
 
 build: build-stamp
-
-build-stamp: configure-stamp 
+build-stamp: patch-stamp configure-stamp 
 	dh_testdir
 	$(MAKE)
 	touch build-stamp
 
-clean:
+clean: unpatch
 	dh_testdir
 	dh_testroot
 	rm -f build-stamp configure-stamp
@@ -32,7 +32,7 @@ install: build
 	dh_clean -k
 	dh_installdirs
 	$(MAKE) install BINDIR=$(CURDIR)/debian/wmclock/usr/bin
-	for dir in lang.*; do \
+	for dir in lang.* debian/lang.*; do \
 		cp -r "$$dir" $(CURDIR)/debian/wmclock/usr/share/wmclock; \
 	done
 
@@ -41,26 +41,16 @@ binary-indep: build install;
 binary-arch: build install
 	dh_testdir
 	dh_testroot
-#	dh_installdebconf	
-	dh_installdocs
+	dh_installdocs		README
 	dh_installexamples
-	dh_installmenu -n
-#	dh_installlogrotate
-#	dh_installemacsen
-#	dh_installpam
-#	dh_installmime
-#	dh_installinit
-#	dh_installcron
-	dh_installman wmclock.man
-#	dh_undocumented
-	dh_installchangelogs ChangeLog
+	dh_installmenu
+	dh_installman		wmclock.man
+	dh_installchangelogs	ChangeLog
 	dh_link
 	dh_strip
 	dh_compress
 	dh_fixperms
-#	dh_makeshlibs
 	dh_installdeb
-#	dh_perl
 	dh_shlibdeps
 	dh_gencontrol
 	dh_md5sums

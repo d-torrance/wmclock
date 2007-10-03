@@ -1,0 +1,32 @@
+#! /bin/sh /usr/share/dpatch/dpatch-run
+## 00-fix_manpage_source_chgs_prior_adoption.dpatch by Sandro Tosi <matrixhasu@gmail.com>
+##
+## All lines beginning with `## DP:' are a description of the patch.
+## DP: No description.
+
+@DPATCH@
+diff -urNad wmclock~/wmclock.man.in wmclock/wmclock.man.in
+--- wmclock~/wmclock.man.in	2000-03-08 07:56:36.000000000 +0100
++++ wmclock/wmclock.man.in	2007-10-03 22:40:05.000000000 +0200
+@@ -160,6 +160,21 @@
+ the bottom.  The weekday abbreviations must also be arranged
+ vertically, beginning with Monday at the top and continuing to Sunday
+ at the bottom.
++.PP
++On Debian systems you can find XPM files for a variety of languages in: 
++.PP
++.RS
++.BR /usr/share/wmclock/
++.RE
++.PP
++For example, to have a French display, you could use the following 
++command line:
++.PP
++.RS
++.TQ
++wmclock \-monthxpm /usr/share/wmclock/lang.french/month.xpm \-weekdayxpm /usr/share/wmclock/lang.french/weekday.xpm
++.RE
++.PP
+ .SS Obsolete Options
+ .PP
+ In order to maintain command-line compatibility (mostly) with

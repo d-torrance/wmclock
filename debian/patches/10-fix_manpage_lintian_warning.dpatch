@@ -1,0 +1,19 @@
+#! /bin/sh /usr/share/dpatch/dpatch-run
+## 10-fix_manpage_lintian_warning.dpatch by Sandro Tosi <matrixhasu@gmail.com>
+##
+## All lines beginning with `## DP:' are a description of the patch.
+## DP: No description.
+
+@DPATCH@
+diff -urNad wmclock~/wmclock.man.in wmclock/wmclock.man.in
+--- wmclock~/wmclock.man.in	2007-10-03 22:47:17.000000000 +0200
++++ wmclock/wmclock.man.in	2007-10-03 22:47:51.000000000 +0200
+@@ -211,7 +211,7 @@
+ .\" ----------------------------------------------------------------
+ .SH COPYRIGHT AND LICENSE
+ .PP
+-Copyright © 1999 by Jim Knoble <jmknoble@pobox.com>.  Significant
++Copyright \(co 1999 by Jim Knoble <jmknoble@pobox.com>.  Significant
+ portions of
+ .B wmclock
+ are directly derived from

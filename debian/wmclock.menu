@@ -1,3 +1,0 @@
-?package(wmclock):needs="x11" \
-   section="Apps/Tools" hints="Clocks" title="Wmclock" \
-   command="/usr/bin/wmclock"

@@ -1,3 +1,51 @@
+wmclock (1.0.12.2-7) unstable; urgency=low
+
+  * Adopting package (Closes: #439966)
+  * debian/control
+    - add myself as maintainer
+    - added Homepage field to source stanza
+    - little reorg of short and long description
+    - depends against debhelper at least version 5
+    - added dependency against dpatch
+  * debian/watch
+    - added
+  * debian/compat
+    - bump to 5
+  * debian/copyright
+    - added myself as new maintainer
+    - added new upstram website address
+    - reported upstream as copyright holder, along with asclock copyright
+      holders, since wmclock derives from that
+    - separated license and copyright section (previous mixed up)
+    - fixed license location on a debian machine (it is GPLv2 not GPLv1)
+  * debian/rules
+    - removed unused dh_ tools calls
+    - added explicit file names to dh_installdocs
+    - removed "-n" param from dh_installmenu call
+    - added dpatch stuff
+    - installing debian/lang.* too
+  * debian/wmclock.docs
+    - removed since merged with debian/rules
+  * debian/wmclock.menu
+    - renamed wmclock.menu to menu
+  * debian/menu
+    - manu section is Applications
+  * debian/wmclock.post{inst,rm}
+    - deleted since menu update is managed by dh_installmenu
+  * wmclock.man.in
+    - taken back to upstream version
+  * debian/patches/00-fix_manpage_source_chgs_prior_adoption.dpatch
+    - apply source code modification done (before adoption) without patching
+  * debian/patches/00-fix_wmclockc_source_chgs_prior_adoption.dpatch
+    - apply source code modification done (before adoption) without patching
+  * debian/patches/10-fix_manpage_lintian_warning.dpatch
+    - added to fix a lintian warning about (c) character in manpage
+      represented using extended char and not with "\(co)" escape sequence
+  * debian/lang.polish/*
+    - moved here since they are provided buy Debian maintainer, not upstream
+
+ -- Sandro Tosi <matrixhasu@gmail.com>  Wed, 03 Oct 2007 22:54:36 +0200
+
 wmclock (1.0.12.2-6) unstable; urgency=low
 
   * debian/control:

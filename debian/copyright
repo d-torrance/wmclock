@@ -1,14 +1,33 @@
 This package was debianized by Szabolcs Horvath
 <horvaths@janus.gimsz.sulinet.hu> on Sun, 15 Apr 2001 07:08:38 +0000.
-It is now maintained by Romain Francoise <rfrancoise@debian.org>.
 
-It was downloaded from http://www.bensinclair.com/dockapp/
+It was maintained by Romain Francoise <rfrancoise@debian.org>.
+Is is not maintained by Sandro Tosi <matrixhasu@gmail.com>
+
+It was downloaded from http://www.bensinclair.com/dockapp/ and it is
+now available on http://www.jmknoble.net/WindowMaker/wmclock/ .
 
 Upstream Author: Jim Knoble <jmknoble@pobox.com>
 
-Copyright: wmclock contains parts from asclock and original code, all
-licensed under the GNU General Public License (GPL), with additional
-warranty-voiding clauses.
+Copyright: 1999 Jim Knoble <jmknoble@pobox.com>
+           Significant portions  of wmclock are  directly derived from
+           asclock by Beat  Christen <spiff@longstreet.ch>, who, along
+           with asclock's  other authors, owns the  copyright to those
+           portions of wmclock.
+
+License: 
+
+   Wmclock is  licensed under the GNU General  Public License, version
+   2,    or   (at    your    option)   any    later   version.     See
+   <http://www.gnu.org/> for more information.
+
+   The software is  provided ``as is'', without warranty  of any kind,
+   express or implied, including but  not limited to the warranties of
+   merchantability,   fitness    for   a   particular    purpose   and
+   noninfringement.  In no event shall the author(s) be liable for any
+   claim,  damages  or  other  liability,  whether  in  an  action  of
+   contract, tort or otherwise, arising from, out of or in connection
+   with the software or the use or other dealings in the software.
 
 On Debian GNU/Linux systems, the complete text of the GNU General Public
-License can be found in `/usr/share/common-licenses/GPL'.
+License, version 2, can be found in `/usr/share/common-licenses/GPL-2'.
