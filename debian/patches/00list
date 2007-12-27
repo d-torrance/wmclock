@@ -1,3 +1,4 @@
 00-fix_manpage_source_chgs_prior_adoption
 00-fix_wmclockc_source_chgs_prior_adoption
 10-fix_manpage_lintian_warning
+20_fix_manpage_name

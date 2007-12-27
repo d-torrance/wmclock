@@ -1,3 +1,19 @@
+wmclock (1.0.12.2-8) unstable; urgency=low
+
+  * debian/control
+    - adding build-dependency (Closes: #450537)
+    - bump Standard-Version to 3.7.3
+  * debian/rules
+    - some little changes
+  * debian/copyright
+    - indented with 4 spaces
+  * debian/menu
+    - updated to new menu policy
+  * debian/patches/20_fix_manpage_name.dpatch
+    - added to fix manpage first line (lintian warning)
+
+ -- Sandro Tosi <matrixhasu@gmail.com>  Thu, 27 Dec 2007 19:20:07 +0100
+
 wmclock (1.0.12.2-7) unstable; urgency=low
 
   * Adopting package (Closes: #439966)
@@ -44,7 +60,7 @@ wmclock (1.0.12.2-7) unstable; urgency=low
   * debian/lang.polish/*
     - moved here since they are provided buy Debian maintainer, not upstream
 
- -- Sandro Tosi <matrixhasu@gmail.com>  Wed, 03 Oct 2007 22:54:36 +0200
+ -- Sandro Tosi <matrixhasu@gmail.co>  Wed, 19 Dec 2007 22:59:04 +0100
 
 wmclock (1.0.12.2-6) unstable; urgency=low
 

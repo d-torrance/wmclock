@@ -5,8 +5,7 @@ include /usr/share/dpatch/dpatch.make
 configure: configure-stamp
 configure-stamp:
 	dh_testdir
-	./configure --prefix=/usr                     \
-		    --mandir=/usr/share/man
+	./configure --prefix=/usr --mandir=/usr/share/man
 	touch configure-stamp
 
 build: build-stamp
@@ -15,10 +14,11 @@ build-stamp: patch-stamp configure-stamp
 	$(MAKE)
 	touch build-stamp
 
-clean: unpatch
+clean: clean-patched unpatch
+clean-patched: patch-stamp
 	dh_testdir
 	dh_testroot
-	rm -f build-stamp configure-stamp
+	rm -f build-stamp configure-stamp patch-stamp
 	if [ -f Makefile ]; then              \
 		rm -f month.xpm weekday.xpm;  \
 		$(MAKE) clean;                \
@@ -31,7 +31,7 @@ install: build
 	dh_testroot
 	dh_clean -k
 	dh_installdirs
-	$(MAKE) install BINDIR=$(CURDIR)/debian/wmclock/usr/bin
+	+$(MAKE) install BINDIR=$(CURDIR)/debian/wmclock/usr/bin
 	for dir in lang.* debian/lang.*; do \
 		cp -r "$$dir" $(CURDIR)/debian/wmclock/usr/share/wmclock; \
 	done
