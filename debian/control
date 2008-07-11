@@ -2,8 +2,8 @@ Source: wmclock
 Section: x11
 Priority: optional
 Maintainer: Sandro Tosi <matrixhasu@gmail.com>
-Build-Depends: debhelper (>= 5), libxpm-dev, libx11-dev, xutils, dpatch, x11proto-xext-dev, libxt-dev, libxext-dev
-Standards-Version: 3.7.3
+Build-Depends: debhelper (>= 5), libxpm-dev, libx11-dev, xutils-dev, dpatch, libxt-dev, libxext-dev
+Standards-Version: 3.8.0
 Homepage: http://www.jmknoble.net/WindowMaker/wmclock/
 
 Package: wmclock

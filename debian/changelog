@@ -1,3 +1,15 @@
+wmclock (1.0.12.2-9) unstable; urgency=low
+
+  * debian/control
+    - removed x11proto-xext-dev build-dep since libxext-dev already depends on
+      it
+    - replaced xutils build-dep with xutils-dev; thanks to Daniel Schepler for
+      the report; Closes: #485239
+    - bump Standards-Version to 3.8.0
+      + debian/README.source added
+
+ -- Sandro Tosi <matrixhasu@gmail.com>  Fri, 11 Jul 2008 23:20:13 +0200
+
 wmclock (1.0.12.2-8) unstable; urgency=low
 
   * debian/control
