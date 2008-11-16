@@ -1,3 +1,34 @@
+wmclock (1.0.12.2-10) unstable; urgency=low
+
+  * debian/control:
+    + New maintainer (closes: #490735).
+    + Reorder Build-Depends.
+    + Remove extraneous spaces in description.
+
+  * debian/changelog:
+    + Fixed typos in previous entries.
+  * debian/README.source:
+    + Remove useless file.
+
+  * debian/patches/00-fix_manpage_source_chgs_prior_adoption.dpatch:
+    + Renamed to 20_manpage_xpm_notes.dpatch.
+    + Add patch description.
+  * debian/patches/00-fix_wmclockc_source_chgs_prior_adoption.dpatch:
+    + Renamed to 21_fix_year_display.dpatch.
+    + Add patch description.
+  * debian/patches/10-fix_manpage_lintian_warning.dpatch,
+    debian/patches/20_fix_manpage_name.dpatch:
+    + Coalesced into 10_manpage_fixes.dpatch.
+    + Add a proper patch description.
+  * debian/patches/22_fix_12_year_display.dpatch:
+    + Added; add back fix for broken display when both -12 and -year are
+      given on the command line. Fix got lost at some point.
+  * debian/patches/23_select_dont_sleep.dpatch:
+    + Added; use select() instead of sleeping in order to reduce wakeups
+      (closes: #495468).
+
+ -- Julien BLACHE <jblache@debian.org>  Sun, 16 Nov 2008 18:42:27 +0100
+
 wmclock (1.0.12.2-9) unstable; urgency=low
 
   * debian/control
@@ -41,7 +72,7 @@ wmclock (1.0.12.2-7) unstable; urgency=low
     - bump to 5
   * debian/copyright
     - added myself as new maintainer
-    - added new upstram website address
+    - added new upstream website address
     - reported upstream as copyright holder, along with asclock copyright
       holders, since wmclock derives from that
     - separated license and copyright section (previous mixed up)
@@ -57,7 +88,7 @@ wmclock (1.0.12.2-7) unstable; urgency=low
   * debian/wmclock.menu
     - renamed wmclock.menu to menu
   * debian/menu
-    - manu section is Applications
+    - menu section is Applications
   * debian/wmclock.post{inst,rm}
     - deleted since menu update is managed by dh_installmenu
   * wmclock.man.in
@@ -70,7 +101,7 @@ wmclock (1.0.12.2-7) unstable; urgency=low
     - added to fix a lintian warning about (c) character in manpage
       represented using extended char and not with "\(co)" escape sequence
   * debian/lang.polish/*
-    - moved here since they are provided buy Debian maintainer, not upstream
+    - moved here since they are provided by Debian maintainer, not upstream
 
  -- Sandro Tosi <matrixhasu@gmail.co>  Wed, 19 Dec 2007 22:59:04 +0100
 

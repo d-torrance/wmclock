@@ -2,7 +2,7 @@
 ## 00-fix_wmclockc_source_chgs_prior_adoption.dpatch by Sandro Tosi <matrixhasu@gmail.com>
 ##
 ## All lines beginning with `## DP:' are a description of the patch.
-## DP: No description.
+## DP: Fix year display in -year mode. Fix for #126742.
 
 @DPATCH@
 diff -urNad wmclock~/wmclock.c wmclock/wmclock.c

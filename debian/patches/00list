@@ -1,4 +1,6 @@
-00-fix_manpage_source_chgs_prior_adoption
-00-fix_wmclockc_source_chgs_prior_adoption
-10-fix_manpage_lintian_warning
-20_fix_manpage_name
+10_manpage_fixes
+20_manpage_xpm_notes
+21_fix_year_display
+22_fix_12_year_display
+23_select_dont_sleep
+
