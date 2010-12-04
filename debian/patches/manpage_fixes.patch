@@ -1,12 +1,11 @@
-#! /bin/sh /usr/share/dpatch/dpatch-run
-## 20_fix_manpage_name.dpatch by Sandro Tosi <matrixhasu@gmail.com>
-##
-## DP: Fix manpage first line. Use proper escape sequence for (c) character.
+Description: Manpage fixes
+ Fix first line and use proper escape sequence for (c) character.
+Author: Sandro Tosi <matrixhasu@gmail.com>
 
-@DPATCH@
-diff -urNad wmclock-1.0.12.2~/wmclock.man.in wmclock-1.0.12.2/wmclock.man.in
---- wmclock-1.0.12.2~/wmclock.man.in	2008-11-16 18:22:33.061623927 +0100
-+++ wmclock-1.0.12.2/wmclock.man.in	2008-11-16 18:22:33.417626015 +0100
+Index: wmclock-1.0.13/wmclock.man.in
+===================================================================
+--- wmclock-1.0.13.orig/wmclock.man.in	2010-12-03 21:47:21.000000000 +0100
++++ wmclock-1.0.13/wmclock.man.in	2010-12-04 17:39:17.764387469 +0100
 @@ -25,9 +25,7 @@
  .TH wmclock 1x "@DATE@" "Version @VERSION@"
  .\" ----------------------------------------------------------------
@@ -18,7 +17,7 @@ diff -urNad wmclock-1.0.12.2~/wmclock.man.in wmclock-1.0.12.2/wmclock.man.in
  .\" ----------------------------------------------------------------
  .SH SYNOPSIS
  .HP
-@@ -196,7 +194,7 @@
+@@ -199,7 +197,7 @@
  .\" ----------------------------------------------------------------
  .SH COPYRIGHT AND LICENSE
  .PP

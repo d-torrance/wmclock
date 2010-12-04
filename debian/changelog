@@ -1,3 +1,31 @@
+wmclock (1.0.13-1) unstable; urgency=low
+
+  * New upstream release.
+  * Switch to source format 3.0 (quilt).
+
+  * debian/control:
+    + Bump Standards-Version to 3.9.1 (no changes).
+    + Update Homepage field for new upstream website.
+    + Drop dpatch build-dep.
+  * debian/copyright:
+    + Updated to reflect new upstream maintainer and website.
+  * debian/watch:
+    + Updated for new upstream website.
+  * debian/rules:
+    + Removed dpatch support.
+
+  * debian/lang.polish:
+    + Removed; a better version is now provided by upstream.
+
+  * debian/patches/21_fix_year_display.dpatch:
+    + Removed; proper fix added upstream.
+  * debian/patches/23_select_dont_sleep.dpatch:
+    + Removed; applied upstream.
+  * debian/patches/*:
+    + Renamed and refreshed.
+
+ -- Julien BLACHE <jblache@debian.org>  Sat, 04 Dec 2010 17:37:47 +0100
+
 wmclock (1.0.12.2-10) unstable; urgency=low
 
   * debian/control:

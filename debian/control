@@ -2,9 +2,9 @@ Source: wmclock
 Section: x11
 Priority: optional
 Maintainer: Julien BLACHE <jblache@debian.org>
-Build-Depends: debhelper (>= 5), dpatch, libxpm-dev, libx11-dev, libxt-dev, libxext-dev, xutils-dev
-Standards-Version: 3.8.0
-Homepage: http://www.jmknoble.net/WindowMaker/wmclock/
+Build-Depends: debhelper (>= 5), libxpm-dev, libx11-dev, libxt-dev, libxext-dev, xutils-dev
+Standards-Version: 3.9.1
+Homepage: http://www.bluestop.org/wmclock/
 
 Package: wmclock
 Architecture: any
