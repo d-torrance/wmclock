@@ -1,10 +1,21 @@
+wmclock (1.0.14-2) unstable; urgency=low
+
+  * New maintainer (Closes: #688534).
+  * debian/compat
+    + Bump to 9.
+  * debian/control
+    + Bump Standards-Version to 3.9.4, no changes required.
+  * debian/rules
+    + Simplified to debhelper 7 style.
+
+ -- Doug Torrance <dtorrance@monmouthcollege.edu>  Thu, 12 Sep 2013 00:07:25 -0500
+
 wmclock (1.0.14-1) unstable; urgency=low
 
   * New upstream release.
-
   * debian/control:
     + Do not recommend wmaker, as dockapps can be used with a number of other
-      window managers (closes: #624484).
+      window managers (Closes: #624484).
     + Bump Standards-Version to 3.9.2 (no changes).
 
  -- Julien BLACHE <jblache@debian.org>  Thu, 02 Jun 2011 12:07:58 +0200
@@ -13,7 +24,6 @@ wmclock (1.0.13-1) unstable; urgency=low
 
   * New upstream release.
   * Switch to source format 3.0 (quilt).
-
   * debian/control:
     + Bump Standards-Version to 3.9.1 (no changes).
     + Update Homepage field for new upstream website.
@@ -24,7 +34,6 @@ wmclock (1.0.13-1) unstable; urgency=low
     + Updated for new upstream website.
   * debian/rules:
     + Removed dpatch support.
-
   * debian/lang.polish:
     + Removed; a better version is now provided by upstream.
 
@@ -40,15 +49,13 @@ wmclock (1.0.13-1) unstable; urgency=low
 wmclock (1.0.12.2-10) unstable; urgency=low
 
   * debian/control:
-    + New maintainer (closes: #490735).
+    + New maintainer (Closes: #490735).
     + Reorder Build-Depends.
     + Remove extraneous spaces in description.
-
   * debian/changelog:
     + Fixed typos in previous entries.
   * debian/README.source:
     + Remove useless file.
-
   * debian/patches/00-fix_manpage_source_chgs_prior_adoption.dpatch:
     + Renamed to 20_manpage_xpm_notes.dpatch.
     + Add patch description.
@@ -64,7 +71,7 @@ wmclock (1.0.12.2-10) unstable; urgency=low
       given on the command line. Fix got lost at some point.
   * debian/patches/23_select_dont_sleep.dpatch:
     + Added; use select() instead of sleeping in order to reduce wakeups
-      (closes: #495468).
+      (Closes: #495468).
 
  -- Julien BLACHE <jblache@debian.org>  Sun, 16 Nov 2008 18:42:27 +0100
 
@@ -74,7 +81,7 @@ wmclock (1.0.12.2-9) unstable; urgency=low
     - removed x11proto-xext-dev build-dep since libxext-dev already depends on
       it
     - replaced xutils build-dep with xutils-dev; thanks to Daniel Schepler for
-      the report; Closes: #485239
+      the report; (Closes: #485239)
     - bump Standards-Version to 3.8.0
       + debian/README.source added
 
@@ -162,13 +169,13 @@ wmclock (1.0.12.2-5) unstable; urgency=low
 wmclock (1.0.12.2-4) unstable; urgency=low
 
   * Apply patch from Vino Fernando Crescini <jcrescin@cit.uws.edu.au> to
-    fix -12 and -year combined display (closes: #228985).
+    fix -12 and -year combined display (Closes: #228985).
 
  -- Romain Francoise <rfrancoise@debian.org>  Sun, 25 Jan 2004 15:48:43 +0100
 
 wmclock (1.0.12.2-3) unstable; urgency=low
 
-  * New maintainer (closes: #214392).
+  * New maintainer (Closes: #214392).
   * debian/control:
     + Update maintainer contact info.
     + Bump Standards-Version to 3.6.1.0.
@@ -179,43 +186,41 @@ wmclock (1.0.12.2-3) unstable; urgency=low
   * debian/copyright:
     + Update maintainer information.
     + Clarify license info.
-    + Reword sentence about the location of the GNU GPL on Debian 
+    + Reword sentence about the location of the GNU GPL on Debian
       systems.
-  * debian/rules: 
+  * debian/rules:
     + Major facelift, separating configure and build stages.
     + Remove old DH_COMPAT variables.
     + Install localized XPM images in /usr/share/wmclock/.
     + Call dh_installmenu -n.
   * debian/compat: New file.
-  * debian/README.Debian: New file, explaining how to use the localized 
+  * debian/README.Debian: New file, explaining how to use the localized
     display.
-  * debian/wmclock.{postinst,postrm,menu}: New files.  Install wmclock 
+  * debian/wmclock.{postinst,postrm,menu}: New files. Install wmclock
     in the Debian menu in Apps/Tools.
-  * Don't ship the manpage in the Debian diff, use the version provided 
-    by upstream since they are identical.  Include information about the 
+  * Don't ship the manpage in the Debian diff, use the version provided
+    by upstream since they are identical.  Include information about the
     localized XPM files.
-  * Acknowledging NMU (closes: #105699).
-  * Include patch to fix -year display (closes: #126742).
+  * Acknowledging NMU (Closes: #105699).
+  * Include patch to fix -year display (Closes: #126742).
 
  -- Romain Francoise <rfrancoise@debian.org>  Mon,  6 Oct 2003 20:19:30 +0200
 
 wmclock (1.0.12.2-2.1) unstable; urgency=low
 
-  * NMU
+  * Non-maintainer upload.
   * debian/control: added build-dependency on xutils (Closes: #105699)
 
  -- Branden Robinson <branden@debian.org>  Wed, 18 Jul 2001 17:27:06 -0500
 
 wmclock (1.0.12.2-2) unstable; urgency=low
 
-  * Source dependency xlibs-dev added. Closes: #99377
+  * Source dependency xlibs-dev added. (Closes: #99377)
 
  -- Szabolcs Horvath <horvaths@janus.gimsz.sulinet.hu>  Mon,  4 Jun 2001 07:58:30 +0000
 
 wmclock (1.0.12.2-1) unstable; urgency=low
 
-  * Initial Release. Closes: #93782
+  * Initial Release. (Closes: #93782)
 
  -- Szabolcs Horvath <horvaths@janus.gimsz.sulinet.hu>  Sun, 15 Apr 2001 07:08:38 +0000
-
-

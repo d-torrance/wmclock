@@ -1,9 +1,9 @@
 Source: wmclock
 Section: x11
 Priority: optional
-Maintainer: Julien BLACHE <jblache@debian.org>
-Build-Depends: debhelper (>= 5), libxpm-dev, libx11-dev, libxt-dev, libxext-dev, xutils-dev
-Standards-Version: 3.9.2
+Maintainer: Doug Torrance <dtorrance@monmouthcollege.edu>
+Build-Depends: debhelper (>= 9), libxpm-dev, libx11-dev, libxt-dev, libxext-dev, xutils-dev
+Standards-Version: 3.9.4
 Homepage: http://www.bluestop.org/wmclock/
 
 Package: wmclock
@@ -14,4 +14,3 @@ Description: dockable clock applet for Window Maker
  time in a dockable tile. It features multiple language support, 24h
  or 12h time display, and can run a user-specified program on mouse
  click.
-
