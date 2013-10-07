@@ -1,38 +1,38 @@
-This package was debianized by Szabolcs Horvath
-<horvaths@janus.gimsz.sulinet.hu> on Sun, 15 Apr 2001 07:08:38 +0000.
-Romain Francoise <rfrancoise@debian.org> took over maintenance in
-October 2003, handing over maintenance to Sandro Tosi <matrixhasu@gmail.com>
-in December 2007.
+Format: http://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
+Upstream-Name: wmsystemtray
+Upstream-Contact: Jim Knoble <jmknoble@pobox.com>
+Source: http://www.bluestop.org/wmclock/
 
-It is now maintained by Julien BLACHE <jblache@debian.org>.
+Files: *
+Copyright: 1999 Jim Knoble
+License: GPL-2+
 
-It was downloaded from: <http://www.bluestop.org/wmclock/>
+Files: debian/*
+Copyright: 2001 Szabolcs Horvath
+	   2003 Romain Francoise
+	   2007 Sandro Tosi
+	   2010 Julien Blache
+	   2013 Doug Torrance
+License: GPL-2+
 
-Upstream Authors:
-
-    Jim Knoble <jmknoble@pobox.com>
-    Bruce Cran <bruce@cran.org.uk>
-
-Copyright:
-
-    1999 Jim Knoble <jmknoble@pobox.com>
-    Significant portions of wmclock  are directly derived from asclock
-    by Beat Christen  <spiff@longstreet.ch>, who, along with asclock's
-    other authors, owns the copyright to those portions of wmclock.
-
-License: 
-
-    Wmclock is licensed under  the GNU General Public License, version
-    2,    or   (at    your   option)    any   later    version.    See
-    <http://www.gnu.org/> for more information.
-
-    The software is provided ``as  is'', without warranty of any kind,
-    express or implied, including but not limited to the warranties of
-    merchantability,   fitness   for    a   particular   purpose   and
-    noninfringement.  In  no event shall  the author(s) be  liable for
-    any claim,  damages or  other liability, whether  in an  action of
-    contract, tort or otherwise, arising from, out of or in connection
-    with the software or the use or other dealings in the software.
-
-On Debian GNU/Linux systems, the complete text of the GNU General Public
-License, version 2, can be found in `/usr/share/common-licenses/GPL-2'.
+License: GPL-2+ 
+ This program is free software; you can redistribute it
+ and/or modify it under the terms of the GNU General Public
+ License as published by the Free Software Foundation; either
+ version 2 of the License, or (at your option) any later
+ version.
+ .
+ This program is distributed in the hope that it will be
+ useful, but WITHOUT ANY WARRANTY; without even the implied
+ warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR
+ PURPOSE.  See the GNU General Public License for more
+ details.
+ .
+ You should have received a copy of the GNU General Public
+ License along with this package; if not, write to the Free
+ Software Foundation, Inc., 51 Franklin St, Fifth Floor,
+ Boston, MA  02110-1301 USA
+ .
+ On Debian systems, the full text of the GNU General Public
+ License version 2 can be found in the file
+ `/usr/share/common-licenses/GPL-2'

@@ -1,3 +1,14 @@
+wmclock (1.0.14-3) unstable; urgency=low
+
+  * debian/copyright
+    + Update to copyright format 1.0.
+  * debian/patches
+    + Fix incorrect year with -year option (Closes: #723887).
+  * debian/rules
+    + Install translated xpms again (Closes: #725677).
+
+ -- Doug Torrance <dtorrance@monmouthcollege.edu>  Mon, 07 Oct 2013 18:07:12 -0500
+
 wmclock (1.0.14-2) unstable; urgency=low
 
   * New maintainer (Closes: #688534).
