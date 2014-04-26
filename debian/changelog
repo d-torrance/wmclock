@@ -1,5 +1,8 @@
 wmclock (1.0.14-4) unstable; urgency=low
 
+  * debian/control
+    + Bumped Standards-Version to 3.9.5, no changes required.
+    + Added Vcs-* fields.
   * debian/patches
     + (hardening.patch) Imported LDFLAGS for hardening.
 
