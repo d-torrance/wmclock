@@ -1,3 +1,10 @@
+wmclock (1.0.14-4) unstable; urgency=low
+
+  * debian/patches
+    + (hardening.patch) Imported LDFLAGS for hardening.
+
+ -- Doug Torrance <dtorrance@monmouthcollege.edu>  Sat, 26 Apr 2014 15:29:37 -0500
+
 wmclock (1.0.14-3) unstable; urgency=low
 
   * debian/copyright
