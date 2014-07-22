@@ -5,8 +5,8 @@ Maintainer: Doug Torrance <dtorrance@monmouthcollege.edu>
 Build-Depends: debhelper (>= 9), libxpm-dev, libx11-dev, libxt-dev, libxext-dev, xutils-dev
 Standards-Version: 3.9.5
 Homepage: http://www.bluestop.org/wmclock/
-Vcs-Browser: https://github.com/profzoom/wmclock
-Vcs-Git: https://github.com/profzoom/wmclock.git -b debian
+Vcs-Browser: https://github.com/d-torrance/wmclock
+Vcs-Git: https://github.com/d-torrance/wmclock.git
 
 Package: wmclock
 Architecture: any
