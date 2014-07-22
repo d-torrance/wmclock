@@ -1,3 +1,22 @@
+wmclock (1.0.14-5) unstable; urgency=low
+
+  * debian/control
+    + Update Vcs-* fields.
+  * debian/rules
+    + Pass CFLAGS to make via CCOPTIONS; otherwise it is overwritten by the
+      Makefile.
+    + Run make install.man to install manpage.
+  * debian/wmclock.dirs
+    + Remove file; directories are created by make.
+  * debian/wmclock.docs
+    + Rename to debian/docs.
+  * debian/wmclock.manpages
+    + Remove file; manpage is now installed by make.
+  * debian/wmclock.menu
+    + Rename to debian/menu.
+
+ -- Doug Torrance <dtorrance@monmouthcollege.edu>  Tue, 22 Jul 2014 01:26:56 -0500
+
 wmclock (1.0.14-4) unstable; urgency=low
 
   * debian/control
