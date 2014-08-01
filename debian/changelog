@@ -1,9 +1,9 @@
-wmclock (1.0.14-6) UNRELEASED; urgency=low
+wmclock (1.0.14-6) unstable; urgency=low
 
   * debian/patches/add_interval_option.patch
     - Add -interval option for blink cycle (Closes: #228986).
 
- -- Doug Torrance <dtorrance@monmouthcollege.edu>  Thu, 31 Jul 2014 03:33:25 -0500
+ -- Doug Torrance <profzoom@gloria>  Fri, 01 Aug 2014 14:58:13 -0500
 
 wmclock (1.0.14-5) unstable; urgency=low
 
