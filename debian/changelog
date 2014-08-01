@@ -1,7 +1,7 @@
 wmclock (1.0.14-6) unstable; urgency=low
 
   * debian/patches/add_interval_option.patch
-    - Add -interval option for blink cycle (Closes: #228986).
+    + Add -interval option for blink cycle (Closes: #228986).
 
  -- Doug Torrance <dtorrance@monmouthcollege.edu>  Fri, 01 Aug 2014 15:02:35 -0500
 
@@ -125,11 +125,11 @@ wmclock (1.0.12.2-10) unstable; urgency=low
 wmclock (1.0.12.2-9) unstable; urgency=low
 
   * debian/control
-    - removed x11proto-xext-dev build-dep since libxext-dev already depends on
-      it
-    - replaced xutils build-dep with xutils-dev; thanks to Daniel Schepler for
-      the report; (Closes: #485239)
-    - bump Standards-Version to 3.8.0
+    + Removed x11proto-xext-dev build-dep since libxext-dev
+      already depends on it
+    + Replaced xutils build-dep with xutils-dev. Thanks to Daniel
+      Schepler for the report! (Closes: #485239).
+    + Bump Standards-Version to 3.8.0:
       + debian/README.source added
 
  -- Sandro Tosi <matrixhasu@gmail.com>  Fri, 11 Jul 2008 23:20:13 +0200
@@ -137,66 +137,67 @@ wmclock (1.0.12.2-9) unstable; urgency=low
 wmclock (1.0.12.2-8) unstable; urgency=low
 
   * debian/control
-    - adding build-dependency (Closes: #450537)
-    - bump Standard-Version to 3.7.3
+    + Added x11proto-xext-dev, libxt-dev and libxext-dev
+      to Build-Depends (Closes: #450537).
+    + Bump Standard-Version to 3.7.3.
   * debian/rules
-    - some little changes
+    + Some minor changes.
   * debian/copyright
-    - indented with 4 spaces
+    + Indented with 4 spaces.
   * debian/menu
-    - updated to new menu policy
+    + Updated to new menu policy.
   * debian/patches/20_fix_manpage_name.dpatch
-    - added to fix manpage first line (lintian warning)
+    + Added to fix manpage first line (lintian warning).
 
  -- Sandro Tosi <matrixhasu@gmail.com>  Thu, 27 Dec 2007 19:20:07 +0100
 
 wmclock (1.0.12.2-7) unstable; urgency=low
 
-  * Adopting package (Closes: #439966)
+  * Adopting package (Closes: #439966).
   * debian/control
-    - add myself as maintainer
-    - added Homepage field to source stanza
-    - little reorg of short and long description
-    - depends against debhelper at least version 5
-    - added dependency against dpatch
+    + Add myself as maintainer.
+    + Added Homepage field to source stanza.
+    + Little reorg of short and long description.
+    + Depends against debhelper at least version 5.
+    + Added dpatch to Build-Depends.
   * debian/watch
-    - added
+    + New file.
   * debian/compat
-    - bump to 5
+    + Bump to level 5.
   * debian/copyright
-    - added myself as new maintainer
-    - added new upstream website address
-    - reported upstream as copyright holder, along with asclock copyright
-      holders, since wmclock derives from that
-    - separated license and copyright section (previous mixed up)
-    - fixed license location on a debian machine (it is GPLv2 not GPLv1)
+    + Added myself as new maintainer.
+    + Added new upstream website address.
+    + Reported upstream as copyright holder, along with asclock
+      copyright holders, since wmclock derives from that.
+    + Separated license and copyright section (previous mixed up).
+    + Fixed license location on a debian machine (it is GPLv2, not GPLv1).
   * debian/rules
-    - removed unused dh_ tools calls
-    - added explicit file names to dh_installdocs
-    - removed "-n" param from dh_installmenu call
-    - added dpatch stuff
-    - installing debian/lang.* too
+    + Removed unused dh_ tools calls.
+    + Added explicit file names to dh_installdocs.
+    + Removed "-n" param from dh_installmenu call.
+    + Added dpatch stuff.
+    + Installing debian/lang.* too.
   * debian/wmclock.docs
-    - removed since merged with debian/rules
+    + Removed since merged with debian/rules.
   * debian/wmclock.menu
-    - renamed wmclock.menu to menu
+    + Renamed wmclock.menu to menu.
   * debian/menu
-    - menu section is Applications
+    + The menu section is "Applications".
   * debian/wmclock.post{inst,rm}
-    - deleted since menu update is managed by dh_installmenu
+    + Deleted since menu update is managed by dh_installmenu.
   * wmclock.man.in
-    - taken back to upstream version
+    + Reverted to upstream version.
   * debian/patches/00-fix_manpage_source_chgs_prior_adoption.dpatch
-    - apply source code modification done (before adoption) without patching
+    + Apply source code modification done (before adoption) without patching.
   * debian/patches/00-fix_wmclockc_source_chgs_prior_adoption.dpatch
-    - apply source code modification done (before adoption) without patching
+    + Apply source code modification done (before adoption) without patching.
   * debian/patches/10-fix_manpage_lintian_warning.dpatch
-    - added to fix a lintian warning about (c) character in manpage
-      represented using extended char and not with "\(co)" escape sequence
+    + Added to fix a lintian warning about (c) character in manpage
+      represented using extended char and not with "\(co)" escape sequence.
   * debian/lang.polish/*
-    - moved here since they are provided by Debian maintainer, not upstream
+    + Moved here since they are provided by Debian maintainer, not upstream.
 
- -- Sandro Tosi <matrixhasu@gmail.co>  Wed, 19 Dec 2007 22:59:04 +0100
+ -- Sandro Tosi <matrixhasu@gmail.com>  Wed, 19 Dec 2007 22:59:04 +0100
 
 wmclock (1.0.12.2-6) unstable; urgency=low
 
@@ -209,7 +210,8 @@ wmclock (1.0.12.2-6) unstable; urgency=low
 wmclock (1.0.12.2-5) unstable; urgency=low
 
   * Add Polish versions of the XPM files courtesy of Kacper Perschke.
-  * debian/control: change Build-Depends to libx11-dev, libxpm-dev.
+  * debian/control:
+    + Change Build-Depends to libx11-dev, libxpm-dev.
 
  -- Romain Francoise <rfrancoise@debian.org>  Fri, 15 Apr 2005 20:25:10 +0200
 
@@ -240,15 +242,16 @@ wmclock (1.0.12.2-3) unstable; urgency=low
     + Remove old DH_COMPAT variables.
     + Install localized XPM images in /usr/share/wmclock/.
     + Call dh_installmenu -n.
-  * debian/compat: New file.
-  * debian/README.Debian: New file, explaining how to use the localized
-    display.
-  * debian/wmclock.{postinst,postrm,menu}: New files. Install wmclock
-    in the Debian menu in Apps/Tools.
+  * debian/compat:
+    + New file.
+  * debian/README.Debian:
+    + New file, explaining how to use the localized display.
+  * debian/wmclock.{postinst,postrm,menu}:
+    + New files. Install wmclock in the Debian menu in "Apps/Tools".
   * Don't ship the manpage in the Debian diff, use the version provided
-    by upstream since they are identical.  Include information about the
+    by upstream since they are identical. Include information about the
     localized XPM files.
-  * Acknowledging NMU (Closes: #105699).
+  * Acknowledge NMU (Closes: #105699).
   * Include patch to fix -year display (Closes: #126742).
 
  -- Romain Francoise <rfrancoise@debian.org>  Mon,  6 Oct 2003 20:19:30 +0200
@@ -256,18 +259,19 @@ wmclock (1.0.12.2-3) unstable; urgency=low
 wmclock (1.0.12.2-2.1) unstable; urgency=low
 
   * Non-maintainer upload.
-  * debian/control: added build-dependency on xutils (Closes: #105699)
+  * debian/control:
+    + Added build-dependency on xutils (Closes: #105699).
 
  -- Branden Robinson <branden@debian.org>  Wed, 18 Jul 2001 17:27:06 -0500
 
 wmclock (1.0.12.2-2) unstable; urgency=low
 
-  * Source dependency xlibs-dev added. (Closes: #99377)
+  * Add source dependency on xlibs-dev (Closes: #99377).
 
  -- Szabolcs Horvath <horvaths@janus.gimsz.sulinet.hu>  Mon,  4 Jun 2001 07:58:30 +0000
 
 wmclock (1.0.12.2-1) unstable; urgency=low
 
-  * Initial Release. (Closes: #93782)
+  * Initial Release (Closes: #93782).
 
  -- Szabolcs Horvath <horvaths@janus.gimsz.sulinet.hu>  Sun, 15 Apr 2001 07:08:38 +0000
