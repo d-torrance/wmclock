@@ -2,7 +2,7 @@ Source: wmclock
 Section: x11
 Priority: optional
 Maintainer: Doug Torrance <dtorrance@monmouthcollege.edu>
-Build-Depends: debhelper (>= 9), libxpm-dev, libx11-dev, libxt-dev, libxext-dev, xutils-dev
+Build-Depends: debhelper (>= 9), libxpm-dev, libx11-dev, libxext-dev
 Standards-Version: 3.9.6
 Homepage: http://www.bluestop.org/wmclock/
 Vcs-Browser: https://github.com/d-torrance/wmclock
