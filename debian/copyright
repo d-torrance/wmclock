@@ -1,7 +1,8 @@
 Format: http://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
-Upstream-Name: wmsystemtray
-Upstream-Contact: Jim Knoble <jmknoble@pobox.com>
-Source: http://www.bluestop.org/wmclock/
+Upstream-Name: wmclock
+Upstream-Contact: Window Maker Developers Team
+ <wmaker-dev@lists.windowmaker.org>
+Source: http://windowmaker.org/dockapps/?name=wmclock
 
 Files: *
 Copyright: 1999 Jim Knoble
