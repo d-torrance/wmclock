@@ -4,12 +4,13 @@ wmclock (1.0.15-1) UNRELEASED; urgency=medium
   * debian/control
     - Bump Standards-Version to 3.9.6; no changes required.
     - Remove Build-Depends on libxt-dev and xutils-dev.
-    - Add Build-Depends on dh-autoreconf.
+    - Add Build-Depends on dh-autoreconf and pkg-config.
     - Update Homepage.
   * debian/copyright
     - Update Upstream-* and Source.
   * debian/patches
-    - Remove directory; patches applied upstream.
+    - Remove previous patches; applied upstream.
+    - (clean_xpm.patch) Clean xpm files created during configuration.
   * debian/README.Debian
     - Remove file; documented a feature which has been added upstream
       and is no longer Debian-specific.
