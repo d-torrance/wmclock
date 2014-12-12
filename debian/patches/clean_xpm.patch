@@ -1,0 +1,14 @@
+Description: Clean xpm files created during configuration.
+ The files month.xpm and weekday.xpm are created by wmclock's configure script
+ as symlinks to the files in the appropriate language directory.  If these
+ aren't cleaned, then consecutive builds will fail to do a dpkg-source error.
+Author: Doug Torrance <dtorrance@monmouthcollege.edu>
+Last-Update: 2014-12-12
+
+--- a/Makefile.am
++++ b/Makefile.am
+@@ -5,3 +5,4 @@
+ LIBS += $(x11_LIBS) $(xpm_LIBS) $(xext_LIBS)
+ dist_man_MANS = wmclock.1
+ nobase_dist_pkgdata_DATA = lang.*/*.xpm
++CLEANFILES = month.xpm weekday.xpm
