@@ -1,4 +1,4 @@
-wmclock (1.0.15-1) UNRELEASED; urgency=medium
+wmclock (1.0.15-1) unstable; urgency=medium
 
   * New upstream release.
   * debian/control
@@ -21,7 +21,7 @@ wmclock (1.0.15-1) UNRELEASED; urgency=medium
   * debian/watch
     - Update with new location.
 
- -- Doug Torrance <dtorrance@monmouthcollege.edu>  Thu, 11 Dec 2014 23:55:47 -0600
+ -- Doug Torrance <dtorrance@monmouthcollege.edu>  Fri, 12 Dec 2014 15:49:41 -0600
 
 wmclock (1.0.14-6) unstable; urgency=low
 
