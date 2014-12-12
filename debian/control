@@ -3,7 +3,7 @@ Section: x11
 Priority: optional
 Maintainer: Doug Torrance <dtorrance@monmouthcollege.edu>
 Build-Depends: debhelper (>= 9), libxpm-dev, libx11-dev, libxext-dev,
- dh-autoreconf
+ dh-autoreconf, pkg-config
 Standards-Version: 3.9.6
 Homepage: http://windowmaker.org/dockapps/?name=wmclock
 Vcs-Browser: https://github.com/d-torrance/wmclock
