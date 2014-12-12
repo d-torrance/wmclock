@@ -2,11 +2,3 @@
 
 %:
 	dh $@ --with autoreconf
-
-override_dh_auto_build:
-	dh_auto_build -- CCOPTIONS="$(CFLAGS)"
-
-override_dh_auto_install:
-	dh_auto_install
-	$(MAKE) install.man DESTDIR=$(CURDIR)/debian/wmclock
-	$(MAKE) install.share DESTDIR=$(CURDIR)/debian/wmclock/usr
