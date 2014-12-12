@@ -1,2 +1,2 @@
 version=3
-http://www.bluestop.org/wmclock/ wmclock-([\d\.]*)\.tar\.gz 
+http://windowmaker.org/dockapps/?name=wmclock \?download=wmclock-(.+).tar.gz
