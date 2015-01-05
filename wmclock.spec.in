@@ -3,7 +3,7 @@
 %define Name		wmclock
 %define Version		@VERSION@
 %define Release		1
-%define Prefix		/usr
+%define Prefix		/usr/local
 %define ExecPrefix	/usr/local
 Summary: dockable clock applet for Window Maker
 Name: %{Name}
@@ -12,8 +12,8 @@ Release: %{Release}
 #Epoch: 
 Copyright: GPL
 Group: User Interface/X
-URL: http://www.pobox.com/~jmknoble/WindowMaker/wmclock/
-Source0: http://www.pobox.com/~jmknoble/WindowMaker/wmclock/%{Name}-%{Version}.tar.gz
+URL: http://www.bluestop.org/wmclock/
+Source0: http://www.bluestop.org/wmclock/%{Name}-%{Version}.tar.gz
 #Patch0: 
 #Prefix: %{Prefix}
 BuildRoot: /tmp/%{Name}-%{Version}-%{Release}-root

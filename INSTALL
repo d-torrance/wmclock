@@ -1,6 +1,5 @@
 # INSTALL:  how to install wmclock
 # created 1999-Apr-10 jmk
-# autodate: 1999-Apr-10 03:07
 
 ____________________________
 |O|  Installing wmclock  |X|
@@ -55,4 +54,4 @@ System.
       instructions on installing wmclock into Window Maker's dock.
 
 -- 
-Jim Knoble <jmknoble@pobox.com>
+Bruce Cran <bruce@bluestop.org>

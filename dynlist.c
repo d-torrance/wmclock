@@ -3,7 +3,7 @@
  * autodate: 2000-Mar-08 02:25
  * 
  * by Jim Knoble <jmknoble@pobox.com>
- * Copyright © 1999 Jim Knoble
+ * Copyright (C) 1999 Jim Knoble
  * 
  * Disclaimer:
  * 

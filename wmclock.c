@@ -1,9 +1,8 @@
 /* wmclock.c: a dockable clock applet for Window Maker
  * created 1999-Apr-09 jmk
- * autodate: 2000-Mar-08 02:31
  * 
  * by Jim Knoble <jmknoble@pobox.com>
- * Copyright © 1999 Jim Knoble
+ * Copyright (C) 1999 Jim Knoble
  * 
  * Significant portions of this software are derived from asclock by
  * Beat Christen <spiff@longstreet.ch>.  Such portions are copyright

@@ -2,10 +2,7 @@
 #
 # configure: prepare wmclock to be built using imake and make
 # created 1999-Mar-30 03:40 jmk
-# autodate: 1999-Apr-09 04:19
 
-#DefColorLevel=high
-#ColorLevel=''
 DefLanguage=english
 Language=''
 LangDir=''
@@ -29,14 +26,7 @@ PrintHelp() {
         language.  Defaults to 'english'.  Choices are:
 
 ${langlist}
-
 EOF
-#  Usage: ${0} [--lang <language>] [--colorlevel {low|high}]
-#    --colorlevel {low|high}
-#        Configure wmclock to use a background with a low or high number
-#        of colors when run without the '-shape' flag. Defaults to
-#        'high'.
-#
 }
 
 Die() {
@@ -51,10 +41,6 @@ while [ $# -gt 0 ]; do
             shift
 	    Language="$1"
 	    ;;
-#        --color|--colorlevel)
-#	    shift
-#	    ColorLevel="$1"
-#	    ;;
         --help)
 	    PrintHelp
 	    exit 1
@@ -66,35 +52,16 @@ done
 if [ -z "${Language}" ]; then
     Language="${DefLanguage}"
 fi
-#if [ -z "${ColorLevel}" ]; then
-#    ColorLevel="${DefColorLevel}"
-#fi
 
 LangDir="lang.${Language}"
 if [ ! -d "${LangDir}" ]; then
     Die "${Me}: error: cannot find language directory '${LangDir}'"
 fi
 
-#case "${ColorLevel}" in
-#    low)
-#        ClockPixmap="clk2.xpm"
-#        ;;
-#    high)
-#        ClockPixmap="color.xpm"
-#        ;;
-#    *)
-#        Die "${Me}: error: unknown color level '${ColorLevel}'"
-#	;;
-#esac
-
 echo "Configuring for ${Language} day-of-week and month names ..."
 rm -f month.xpm weekday.xpm
 ln -s "./${LangDir}/month.xpm" .
 ln -s "./${LangDir}/weekday.xpm" .
-
-#echo "Configuring for ${ColorLevel} number of colors ..."
-#rm -f clk.xpm
-#ln -s "./xpm/${ClockPixmap}" ./clk.xpm
 
 echo "Building Makefile from Imakefile ..."
 echo "----------------------------------------------------------------"

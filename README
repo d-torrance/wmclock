@@ -1,6 +1,5 @@
 # README:  notes about wmclock
 # created 1999-Apr-10 jmk
-# autodate: 1999-Apr-10 02:21
 
 _______________________
 |O|  About wmclock  |X|
@@ -81,8 +80,7 @@ _________________________________________________
 |O|  Differences Between asclock and wmclock  |X|
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Wmclock is derived from asclock version 1.0.12 (the latest `stable'
-version, according to <http://www.asclock.org/>), by Beat Christen.
+Wmclock is derived from asclock version 1.0.12 by Beat Christen.
 The major differences between asclock and wmclock are:
 
   (1) Asclock is designed for use with the AfterStep window manager.
@@ -120,7 +118,7 @@ _______________________________________________________
 |O|  Authors, Copyright, License, Disclaimer, etc.  |X|
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Wmclock is Copyright © 1999 by Jim Knoble <jmknoble@pobox.com>.
+Wmclock is Copyright (C) 1999 by Jim Knoble <jmknoble@pobox.com>.
 Significant portions of wmclock are directly derived from asclock by
 Beat Christen <spiff@longstreet.ch>, who, along with asclock's other
 authors, owns the copyright to those portions of wmclock.
@@ -140,4 +138,4 @@ other dealings in the software.
 Your mileage may vary.  Eat your vegetables.
 
 -- 
-Jim Knoble <jmknoble@pobox.com>
+Bruce Cran <bruce@bluestop.org>
