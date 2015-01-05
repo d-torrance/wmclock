@@ -3,13 +3,12 @@ Section: x11
 Priority: optional
 Maintainer: Julien BLACHE <jblache@debian.org>
 Build-Depends: debhelper (>= 5), libxpm-dev, libx11-dev, libxt-dev, libxext-dev, xutils-dev
-Standards-Version: 3.9.1
+Standards-Version: 3.9.2
 Homepage: http://www.bluestop.org/wmclock/
 
 Package: wmclock
 Architecture: any
 Depends: ${shlibs:Depends}, ${misc:Depends}
-Recommends: wmaker
 Description: dockable clock applet for Window Maker
  wmclock is an applet for Window Maker which displays the date and
  time in a dockable tile. It features multiple language support, 24h

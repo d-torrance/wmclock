@@ -2,11 +2,11 @@ Description: Fix display when both -12 and -year are given
 Author: Vino Fernando Crescini <jcrescin@cit.uws.edu.au>
 Bug-Debian: http://bugs.debian.org/228985
 
-Index: wmclock-1.0.13/wmclock.c
+Index: wmclock-1.0.14/wmclock.c
 ===================================================================
---- wmclock-1.0.13.orig/wmclock.c	2010-12-03 21:49:51.000000000 +0100
-+++ wmclock-1.0.13/wmclock.c	2010-12-04 17:39:27.215473570 +0100
-@@ -850,7 +850,14 @@
+--- wmclock-1.0.14.orig/wmclock.c	2010-12-22 13:12:28.000000000 +0100
++++ wmclock-1.0.14/wmclock.c	2011-06-02 12:11:51.233840631 +0200
+@@ -849,7 +849,14 @@
  #endif /* !ONLY_SHAPED_WINDOW */
     for (i = 0; i < NUM_TIME_POSITIONS; i++)
      {

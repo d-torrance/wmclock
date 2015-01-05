@@ -1,3 +1,14 @@
+wmclock (1.0.14-1) unstable; urgency=low
+
+  * New upstream release.
+
+  * debian/control:
+    + Do not recommend wmaker, as dockapps can be used with a number of other
+      window managers (closes: #624484).
+    + Bump Standards-Version to 3.9.2 (no changes).
+
+ -- Julien BLACHE <jblache@debian.org>  Thu, 02 Jun 2011 12:07:58 +0200
+
 wmclock (1.0.13-1) unstable; urgency=low
 
   * New upstream release.
