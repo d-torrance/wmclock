@@ -30,7 +30,7 @@ System.
       options for the C compiler using the `CC' and `CDEBUGFLAGS'
       variables, respectively.  For example:
       
-          make CC=egcs CDEBUGFLAGS='-O6 -mpentium'
+          make CC=clang CDEBUGFLAGS='-O4 -march=pentium2'
 
 
   (3) Test wmclock:
@@ -51,7 +51,7 @@ System.
       
           make install.share
 
-  (5) You're done.  See the README me file accompanying this one for
+  (5) You're done.  See the README file accompanying this one for
       instructions on installing wmclock into Window Maker's dock.
 
 -- 

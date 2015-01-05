@@ -4,7 +4,7 @@
 %define Version		@VERSION@
 %define Release		1
 %define Prefix		/usr
-%define ExecPrefix	/usr/X11R6
+%define ExecPrefix	/usr/local
 Summary: dockable clock applet for Window Maker
 Name: %{Name}
 Version: %{Version}

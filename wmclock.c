@@ -20,6 +20,7 @@
  * with the software or the use or other dealings in the software.
  */
 
+#include <sys/select.h>
 #include <sys/types.h>
 #include <sys/wait.h>
 #include <sys/time.h>
@@ -116,6 +117,30 @@
 #include "xpm/mask.xbm"
 #include "xpm/mask.xpm"
 
+typedef struct _XpmIcon {
+    Pixmap        pixmap;
+    Pixmap        mask;
+    XpmAttributes attributes;
+} XpmIcon;
+
+void showUsage(void);
+void showVersion(void);
+int buildCommand(char *, char **, int *, int *);
+void executeCommand(char *);
+void showError(const char *, const char*);
+void showFatalError(const char *, const char*);
+void GetXpms(void);
+int flushExposeEvents(Window);
+void redrawWindow(XpmIcon *);
+Pixel GetColor(const char *);
+int mytime(void);
+void showYear(void);
+void showTime12(void);
+void showTime24(void);
+void showTime(void);
+char* extractProgName(char *);
+int processArgs(int, char **);
+
 /**********************************************************************/
 int enable12HourClock = 0;	/* default value is 24h format */
 int enableShapedWindow = 1;	/* default value is noshape */
@@ -141,7 +166,8 @@ int yPos[NUM_Y_POSITIONS];
 Display    *dpy;
 Window     rootWindow;
 int        screen;
-/* int        xFd; */
+int        xFd;
+fd_set     xFdSet;
 int        displayDepth;
 XSizeHints sizeHints;
 XWMHints   wmHints;
@@ -168,12 +194,6 @@ int   useUserClockXpm = 0;
 int   useUserMonthXpm = 0;
 int   useUserWeekdayXpm = 0;
 
-typedef struct _XpmIcon {
-    Pixmap        pixmap;
-    Pixmap        mask;
-    XpmAttributes attributes;
-} XpmIcon;
-
 XpmIcon clockBg, led, months, dateNums, weekdays;
 XpmIcon visible;
 
@@ -195,6 +215,7 @@ char *usageText[] = {
 #endif /* !ONLY_SHAPED_WINDOW */
 "    -monthxpm <filename>    get month names from pixmap in <filename>",
 "    -weekdayxpm <filename>  get weekday names from pixmap in <filename>",
+"    -version                display the version",
 NULL
 };
 
@@ -202,7 +223,7 @@ char *version = VERSION;
 
 /**********************************************************************/
 /* Display usage information */
-void showUsage()
+void showUsage(void)
 {
    char **cpp;
    
@@ -230,10 +251,10 @@ int buildCommand(char *command, char **buf, int *buf_len, int *i)
    status = append_string_to_buf(buf, buf_len, i, command);
    if (APPEND_FAILURE == status)
     {
-       return(0);
+       return (0);
     }
    status = append_string_to_buf(buf, buf_len, i, " &");
-   return((APPEND_FAILURE == status) ? 0 : 1);
+   return ((APPEND_FAILURE == status) ? 0 : 1);
 }
 
 /* Execute the given shell command */
@@ -254,13 +275,13 @@ void executeCommand(char *command)
 }
 
 /* Display an error message */
-void showError(char *message, char *data)
+void showError(const char *message, const char *data)
 {
    fprintf(stderr,"%s: can't %s %s\n", progName, message, data);
 }
 
 /* Display an error message and exit */
-void showFatalError(char *message, char *data)
+void showFatalError(const char *message, const char *data)
 {
    showError(message, data);
    exit(1);
@@ -427,7 +448,7 @@ void redrawWindow(XpmIcon *v)
 }
 
 /* Get a Pixel for the given color name */
-Pixel GetColor(char *colorName)
+Pixel GetColor(const char *colorName)
 {
    XColor            color;
    XWindowAttributes attributes;
@@ -446,7 +467,7 @@ Pixel GetColor(char *colorName)
 }
 
 /* Fetch the system time and time zone */
-int mytime()
+int mytime(void)
 {
    struct timeval  tv;
    struct timezone tz;
@@ -457,7 +478,7 @@ int mytime()
 }
 
 /* Display the current year in the LED display */
-void showYear()
+void showYear(void)
 {
    int year;
    int digitXOffset;
@@ -470,11 +491,11 @@ void showYear()
    XCopyArea(dpy, led.pixmap, visible.pixmap, normalGC,
 	     digitXOffset , digitYOffset, LED_NUM_WIDTH, LED_NUM_HEIGHT,
 	     xPos[DIGIT_1_X_POS], yPos[DIGIT_Y_POS]);
-   digitXOffset = LED_NUM_WIDTH * (year % 1000);
+   digitXOffset = LED_NUM_WIDTH * ((year % 100) % 10);
    XCopyArea(dpy, led.pixmap, visible.pixmap, normalGC,
 	     digitXOffset , digitYOffset, LED_NUM_WIDTH, LED_NUM_HEIGHT,
 	     xPos[DIGIT_2_X_POS], yPos[DIGIT_Y_POS]);
-   digitXOffset = LED_NUM_WIDTH * (year % 100);
+   digitXOffset = LED_NUM_WIDTH * ((year / 10) % 10);
    XCopyArea(dpy, led.pixmap, visible.pixmap, normalGC,
 	     digitXOffset , digitYOffset, LED_NUM_WIDTH, LED_NUM_HEIGHT,
 	     xPos[DIGIT_3_X_POS], yPos[DIGIT_Y_POS]);
@@ -485,7 +506,7 @@ void showYear()
 }
 
 /* Display time in twelve-hour mode, with am/pm indicator */
-void showTime12()
+void showTime12(void)
 {
    int digitXOffset;
    int digitYOffset;
@@ -533,7 +554,7 @@ void showTime12()
 }
 
 /* Display time in 24-hour mode, without am/pm indicator */
-void showTime24()
+void showTime24(void)
 {
    int digitXOffset;
    int digitYOffset;
@@ -557,7 +578,7 @@ void showTime24()
 	     xPos[DIGIT_4_X_POS], yPos[DIGIT_Y_POS]);
 }
 
-void showTime()
+void showTime(void)
 {
    int xOffset;
    int yOffset;
@@ -648,7 +669,7 @@ char *extractProgName(char *argv0)
 	   prog_name++;
 	}
     }
-   return(prog_name);
+   return (prog_name);
 }
 
 /* Process program arguments and set corresponding options */
@@ -786,7 +807,7 @@ int processArgs(int argc, char **argv)
 	   showUsage();
 	}
     }
-   return(i);
+   return (i);
 }
 
 /**********************************************************************/
@@ -801,6 +822,7 @@ int main(int argc, char **argv)
    XTextProperty wmName;
    XClassHint    classHint;
    Pixmap        shapeMask;
+   struct timeval nextEvent;
    
    /* Parse command line options */
    progName = extractProgName(argv[0]);
@@ -842,7 +864,7 @@ int main(int argc, char **argv)
    screen       = DefaultScreen(dpy);
    rootWindow   = RootWindow(dpy, screen);
    displayDepth = DefaultDepth(dpy, screen);
-   /* xFd          = XConnectionNumber(dpy); */
+   xFd          = XConnectionNumber(dpy);
    
    /* Icon Daten nach XImage konvertieren */
    GetXpms();
@@ -1042,16 +1064,31 @@ int main(int argc, char **argv)
 	   poll((struct poll *) 0, (size_t) 0, 50);	/* 5/100 sec */
 	}
 #else
-       if (enableYearDisplay)
-	{
-	   usleep(200000L);	/* 1/5 sec */
-	}
+       /* We compute the date of next event, in order to avoid polling */
+       if (enableBlinking)
+	 {
+	   gettimeofday(&nextEvent,NULL);
+	   nextEvent.tv_sec = 0;
+	   nextEvent.tv_usec = 1000000-nextEvent.tv_usec;
+	 }
        else
-	{
-	   usleep(50000L);	/* 5/100 sec */
-	}
+	 {
+	   if (enableYearDisplay)
+	     {
+	       nextEvent.tv_sec = 86400-actualTime%86400;
+	       nextEvent.tv_usec = 0;
+	     }
+	   else
+	     {
+	       nextEvent.tv_sec = 60-actualTime%60;
+	       nextEvent.tv_usec = 0;
+	     }
+	 }
+       FD_ZERO(&xFdSet);
+       FD_SET(xFd,&xFdSet);
+       select(FD_SETSIZE,&xFdSet,NULL,NULL,&nextEvent);
 #endif
     }
-   return(0);
+   return (0);
 }
 

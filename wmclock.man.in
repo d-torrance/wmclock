@@ -31,7 +31,7 @@ a dockable clock for the Window Maker window manager
 .\" ----------------------------------------------------------------
 .SH SYNOPSIS
 .HP
-\fBwmclock\fP [{\-12|\-24|\-year}] [\-noblink] [\-exe \fIprogram\fP]
+\fBwmclock\fP [{\-12|\-24|\-year}] [\-noblink] [\-version] [\-exe \fIprogram\fP]
 [\-led \fIcolor\fP] [\-monthxpm \fIfilename\fP] [\-weekdayxpm
 \fIfilename\fP]
 .\" ----------------------------------------------------------------
@@ -63,6 +63,9 @@ Display the current year in the LED display instead of the time.
 The separator between the hours and minutes in the time display blinks
 by default.  This option turns off the blinking and displays a steadily
 lit separator instead.
+.TP
+\fB\-version\fB
+Displays the version of Wmclock.
 .TP
 \fB\-exe\fR \fIcommand\fR
 Run

@@ -5,6 +5,23 @@
    cvs2cl.pl.  See http://www.red-bean.com/~kfogel/cvs2cl.shtml for more.
   -+- -+- -+- -+- -+- -+- -+- -+- -+- -+- -+- -+- -+- -+- -+- -+- -+- -+-
 
+2010-12-03 20:28  brucec
+	* Imakefile: Bumped version to 1.0.13, add warning flags.
+	
+	* INSTALL: Updated compiler and flags example.
+
+	* wmclock.c, weekday.xpm: Integrated Debian nopolling patch and 
+	FreeBSD's weekday and year patches. Added function prototypes.
+
+	* wmclock.spec.in: Bumped version to 1.0.13, changed ExecPrefix to 
+	/usr/local since /usr/X11R6 is obsolete.
+
+	* lang.polish: Added Polish language files, contributed by 
+	oyd11 at softhome.net
+
+	* lang.croatian: Added Croatian language files, contributed by Josip
+	Deanovic <djosip at croadria.com>
+
 2000-04-13 07:49  jmknoble
 
 	* wmclock.spec.in: Add ChangeLog to %%doc directory.
