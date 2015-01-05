@@ -1,12 +1,12 @@
 .\" wmclock.man: manual page for wmclock -*- nroff -*-
 .\" created 1999-Apr-09 jmk
-.\" 
+.\"
 .\" by Jim Knoble <jmknoble@pobox.com>
 .\" Copyright (C) 1999 Jim Knoble
 .\" Based on asclock.man by Dan Weeks.
-.\" 
+.\"
 .\" Disclaimer:
-.\" 
+.\"
 .\" The software is provided "as is", without warranty of any kind,
 .\" express or implied, including but not limited to the warranties of
 .\" merchantability, fitness for a particular purpose and
@@ -21,12 +21,10 @@
 .TP \\$1
 ..
 .\" ----------------------------------------------------------------
-.TH wmclock 1x "@DATE@" "Version @VERSION@"
+.TH wmclock 1 "2014-Dec-11" "Version @VERSION@"
 .\" ----------------------------------------------------------------
 .SH NAME
-.PP
-.BR wmclock :
-a dockable clock for the Window Maker window manager
+wmclock \- A dockable clock for the Window Maker window manager
 .\" ----------------------------------------------------------------
 .SH SYNOPSIS
 .HP
@@ -62,6 +60,11 @@ Display the current year in the LED display instead of the time.
 The separator between the hours and minutes in the time display blinks
 by default.  This option turns off the blinking and displays a steadily
 lit separator instead.
+.TP
+\fB\-interval\fI n\fR
+Set the blink cycle to
+.I n
+seconds.  The default is 2 (1 second on, 1 second off).
 .TP
 \fB\-version\fB
 Displays the version of Wmclock.
@@ -127,7 +130,7 @@ Window Maker's preferences utility when you click on
 .PP
 When you use
 .B wmclock
-with the 
+with the
 .B \-exe
 option,
 .B wmclock
@@ -137,7 +140,7 @@ while the mouse cursor is over
 .B Wmclock
 uses the
 .BR system (3)
-function from the C library (and ultimately 
+function from the C library (and ultimately
 .BR /bin/sh )
 to run the command; hence, the command must be in Bourne-shell syntax.
 .SS Using Alternate Month and Weekday Abbreviations
@@ -162,6 +165,21 @@ beginning with January at the top and continuing down to December at
 the bottom.  The weekday abbreviations must also be arranged
 vertically, beginning with Monday at the top and continuing to Sunday
 at the bottom.
+.PP
+You can find XPM files for a variety of languages in:
+.PP
+.RS
+.BR "@prefix@/share/wmclock"
+.RE
+.PP
+For example, to have a French display, you could use the following
+command line:
+.PP
+.RS
+.TQ
+wmclock \-monthxpm @prefix@/share/wmclock/lang.french/month.xpm \-weekdayxpm @prefix@/share/wmclock/lang.french/weekday.xpm
+.RE
+.PP
 .SS Obsolete Options
 .PP
 In order to maintain command-line compatibility (mostly) with
